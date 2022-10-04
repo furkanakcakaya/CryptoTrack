@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController{
     var cryptoManager = CryptoManager()
-    
+
     @IBOutlet weak var currencyPicker: UIPickerView!
     @IBOutlet weak var currencyLabel: UILabel!
     @IBOutlet weak var coinLabel: UILabel!
@@ -19,7 +19,7 @@ class ViewController: UIViewController{
         currencyPicker.dataSource = self
         currencyPicker.delegate = self
         cryptoManager.delegate = self
-        // Do any additional setup after loading the view.
+        cryptoManager.getCoinPrice(for: "TRY")
     }
 }
 
